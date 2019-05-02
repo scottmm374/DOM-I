@@ -53,6 +53,20 @@ nav[3].textContent = siteContent["nav"]["nav-item-4"];
 nav[4].textContent = siteContent["nav"]["nav-item-5"];
 nav[5].textContent = siteContent["nav"]["nav-item-6"];
 
+// Nav color change
+
+const headText = document.querySelectorAll("a");
+headText.forEach(header => {
+  header.style.color = "green";
+});
+
+// Add Items to Nav- Not workin yet
+
+// const newNav1 = document.createElement("a");
+// newNav1.textContent = "Blog";
+// const newNavItem1 = querySelector(".newNavItem1");
+// newNavItem1.prepend(newNav1);
+
 
 // CTA
 
@@ -82,19 +96,21 @@ paraGraph[3].textContent = siteContent["main-content"]["product-content"];
 paraGraph[4].textContent = siteContent["main-content"]["vision-content"];
 
 
-
-
 let midImg = document.getElementById("middle-img");
 midImg.src = siteContent["main-content"]["middle-img-src"];
 
 
 //contact
 
-// let Cont = document.querySelector(".contact");
+let contSec = document.getElementsByClassName("contact")[0];
+contSec.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"];
+contSec.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"];
+contSec.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"];
+contSec.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"];
 
 
  
 
 //footer
-// let copyW = document.getElementsByTagName("footer p");
-// copyW.textContent = siteContent["footer"]["copyright"];
+let foot = document.querySelector("footer");
+foot.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
