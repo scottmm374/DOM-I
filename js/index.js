@@ -82,17 +82,19 @@ paraGraph[3].textContent = siteContent["main-content"]["product-content"];
 paraGraph[4].textContent = siteContent["main-content"]["vision-content"];
 
 
+
+
 let midImg = document.getElementById("middle-img");
 midImg.src = siteContent["main-content"]["middle-img-src"];
 
 
-// contact section
+//contact
 
-// let contactTitle = getElementById("contact");
-// contactTitle.setAttribute("h4", siteContent["contact"]["contact-h4"]);
+// let Cont = document.querySelector(".contact");
 
-let 
+
+ 
 
 //footer
-// let copyW = document.querySelector("copyright");
+// let copyW = document.getElementsByTagName("footer p");
 // copyW.textContent = siteContent["footer"]["copyright"];
