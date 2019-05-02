@@ -41,12 +41,17 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-//logo.src = siteContent["nav"]["img-src"]; for comparison
+
 
 //navigation
 
-// const nav = document.querySelector("nav a");
-// nav[0].textContent = siteContent["nav"]["nav-item-1"];
+const nav = document.querySelectorAll("a");
+nav[0].textContent = siteContent["nav"]["nav-item-1"];
+nav[1].textContent = siteContent["nav"]["nav-item-2"];
+nav[2].textContent = siteContent["nav"]["nav-item-3"];
+nav[3].textContent = siteContent["nav"]["nav-item-4"];
+nav[4].textContent = siteContent["nav"]["nav-item-5"];
+nav[5].textContent = siteContent["nav"]["nav-item-6"];
 
 
 // CTA
@@ -59,6 +64,7 @@ btn.textContent = siteContent["cta"]["button"];
 
 let mainImg = document.getElementById("cta-img");
 mainImg.src = siteContent["cta"]["img-src"];
+
 
 //Main-content
 let headFour = document.querySelectorAll("h4");
@@ -76,7 +82,8 @@ paraGraph[3].textContent = siteContent["main-content"]["product-content"];
 paraGraph[4].textContent = siteContent["main-content"]["vision-content"];
 
 
-
+let midImg = document.getElementById("middle-img");
+midImg.src = siteContent["main-content"]["middle-img-src"];
 
 
 // contact section
