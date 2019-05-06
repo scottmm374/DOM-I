@@ -114,3 +114,17 @@ contSec.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
 //footer
 let foot = document.querySelector("footer");
 foot.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
+
+//Add items to Navigation
+
+newNavLinks = document.getElementsByTagName("nav")[0];
+
+let createNewNode = (link) => {
+  let newLink = document.createElement("a");
+  newLink.innerHTML = link;
+  newLink.style.color = "green";
+  return newLink;
+}
+
+newNavLinks.prepend(createNewNode("Blog"));
+newNavLinks.append(createNewNode("Shop"));
