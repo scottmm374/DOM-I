@@ -40,3 +40,91 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+//navigation
+
+const nav = document.querySelectorAll("a");
+nav[0].textContent = siteContent["nav"]["nav-item-1"];
+nav[1].textContent = siteContent["nav"]["nav-item-2"];
+nav[2].textContent = siteContent["nav"]["nav-item-3"];
+nav[3].textContent = siteContent["nav"]["nav-item-4"];
+nav[4].textContent = siteContent["nav"]["nav-item-5"];
+nav[5].textContent = siteContent["nav"]["nav-item-6"];
+
+// Nav color change
+
+const headText = document.querySelectorAll("a");
+headText.forEach(header => {
+  header.style.color = "green";
+});
+
+// Add Items to Nav- Not workin yet
+
+// const newNav1 = document.createElement("a");
+// newNav1.textContent = "Blog";
+// const newNavItem1 = querySelector(".newNavItem1");
+// newNavItem1.prepend(newNav1);
+
+
+// CTA
+
+let ctaH1 = document.querySelector("h1");
+ctaH1.textContent = siteContent["cta"]["h1"];
+
+let btn = document.querySelector("button");
+btn.textContent = siteContent["cta"]["button"];
+
+let mainImg = document.getElementById("cta-img");
+mainImg.src = siteContent["cta"]["img-src"];
+
+
+//Main-content
+let headFour = document.querySelectorAll("h4");
+headFour[0].textContent = siteContent["main-content"]["features-h4"];
+headFour[1].textContent = siteContent["main-content"]["about-h4"];
+headFour[2].textContent = siteContent["main-content"]["services-h4"];
+headFour[3].textContent = siteContent["main-content"]["product-h4"];
+headFour[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let paraGraph = document.querySelectorAll("p");
+paraGraph[0].textContent = siteContent["main-content"]["features-content"];
+paraGraph[1].textContent = siteContent["main-content"]["about-content"];
+paraGraph[2].textContent = siteContent["main-content"]["services-content"];
+paraGraph[3].textContent = siteContent["main-content"]["product-content"];
+paraGraph[4].textContent = siteContent["main-content"]["vision-content"];
+
+
+let midImg = document.getElementById("middle-img");
+midImg.src = siteContent["main-content"]["middle-img-src"];
+
+
+//contact
+
+let contSec = document.getElementsByClassName("contact")[0];
+contSec.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"];
+contSec.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"];
+contSec.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"];
+contSec.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"];
+
+
+ 
+
+//footer
+let foot = document.querySelector("footer");
+foot.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
+
+//Add items to Navigation
+
+newNavLinks = document.getElementsByTagName("nav")[0];
+
+let createNewNode = (link) => {
+  let newLink = document.createElement("a");
+  newLink.innerHTML = link;
+  newLink.style.color = "green";
+  return newLink;
+}
+
+newNavLinks.prepend(createNewNode("Blog"));
+newNavLinks.append(createNewNode("Shop"));
